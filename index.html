@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Yummy</title>
+        <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+        <link rel="stylesheet" href="./font-awsome/css/all.min.css">
+        <link rel="stylesheet" href="./css/bootstrap.min.css" />
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body class="bg-dark">
+        <div class="loader bg-dark">
+            <div class="inner position-fixed bg-dark inset">
+                <i class="fa-solid fa-spinner fa-7x fa-spin text-white"></i>
+            </div>
+        </div>
+    <!-- 
+        =============================================================================
+        ================================ side nav ===================================
+        =============================================================================
+     -->
+        <div class="side-nav position-fixed inset">
+            <div class="d-flex h-100">
+                <div class="side-nav-links bg-dark h-100 p-3 position-relative w-100">
+                    <div class="d-flex flex-column justify-content-between h-100">
+                        <ul>
+                            <li class="py-3">
+                                <a href="#" class="search text-white text-decoration-none d-block">Search</a>
+                            </li>
+                            <li class="py-3">
+                                <a href="#"   class="category text-white text-decoration-none d-block">Categories</a>
+                            </li>
+                            <li class="py-3">
+                                <a href="#" class="area text-white  text-decoration-none d-block">Area</a>
+                            </li>
+                            <li class="py-3">
+                                <a href="#" class="ingredients text-white  text-decoration-none d-block">Ingredients</a>
+                            </li>
+                            <li class="py-3">
+                                <a href="#" class="contact text-white  text-decoration-none d-block">Contact Us</a>
+                            </li>
+                        </ul>
+                        <div class="footer">
+                            <div class="d-flex">
+                                <div class="icon rounded-circle ">
+                                    <i class="fa-brands fa-facebook fs-5 text-white"></i>
+                                </div>
+                                <div class="icon rounded-circle ">
+                                    <i class="fa-brands fa-twitter fs-5 text-white"></i>
+                                </div>
+                                <div class="icon rounded-circle ">
+                                    <i class="fa-solid fa-globe fs-5 text-white"></i>
+                                </div>
+                            </div>
+                            <p class="text-white px-2 pt-2">Copyright Â© 2019 All Rights
+                                Reserved.</p>
+                        </div>
+                    </div>
+                    <div class="side-nav-icons bg-white h-100 py-3 position-absolute start-100 top-0 bottom-0">
+                        <div class="d-flex flex-column justify-content-between align-items-center h-100">
+                            <img src="./images/logo.png" class="w-75 " alt="smiling face emotion" />
+                            <i id="side-nav-toggle" class="fa-solid fa-bars fa-2x text-black"></i>
+                            <div class="text-black">
+                                <i class="fa-solid fa-globe d-block"></i>
+                                <i class="fa-solid fa-share-nodes"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+
+        <!-- 
+        =============================================================================
+        ================================ main sec ===================================
+        =============================================================================
+     -->
+
+        <main class="py-5">
+            <div class="container">
+                <div id="search" class="container-fluid">
+                    <div  class="row py-5">
+                        <div class="col-lg-6">
+                            <div>
+                                <input onKeyup="search(this)" type="text" id="search-name" class="form-control bg-dark p-2 text-white" placeholder="Search By Name" />
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                                <div>
+                                    <input onKeyup="search(this)" type="text" maxlength="1"  id="search-letter" class="form-control bg-dark p-2 text-white" placeholder="Search By First Letter" />
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="root row g-5">
+                    
+                </div>
+            </div>
+        </main>
+
+        <!-- 
+        =============================================================================
+        ================================ contact  ===================================
+        =============================================================================
+        -->
+        <section id="contact" class="contact py-5 vh-100">
+            <div class="container h-100">
+                <div class="form h-100">
+                    <div class="row">
+                        <div class="col-lg-6 my-2">
+                            <input id="name" type="text" class="form-control py-2 bg-white" placeholder="Enter Your Name" />
+                            <p class="name-msg text-center bg-danger-subtle d-none text-danger rounded-3 mt-2 p-3">Special characters and numbers not allowed</p>
+                        </div>
+                        <div class="col-lg-6 my-2">
+                            <input id="email" type="text" class="form-control py-2 bg-white" placeholder="Enter Your Email" />
+                            <p class="text-center bg-danger-subtle d-none text-danger rounded-3 mt-2 p-3">Email not valid *exemple@yyy.zzz</p>
+                        </div>
+                        <div class="col-lg-6 my-2">
+                            <input id="phone" type="tel" class="form-control py-2 bg-white" placeholder="Enter Your phone" />
+                            <p class="text-center bg-danger-subtle d-none text-danger rounded-3 mt-2 p-3">Enter valid Phone Number</p>
+                        </div>
+                        <div class="col-lg-6 my-2">
+                            <input id="age" type="number" class="form-control py-2 bg-white" placeholder="Enter Your Age" />
+                            <p class="text-center bg-danger-subtle d-none text-danger rounded-3 mt-2 p-3">Enter Valid Age
+                            </p>
+                        </div>
+                        <div class="col-lg-6 my-2">
+                            <input id="password" type="password" class="form-control py-2 bg-white" placeholder="Enter Your Password" />
+                            <p class="text-center bg-danger-subtle d-none text-danger rounded-3 mt-2 p-3">Enter valid password Minimum eight characters, at least one letter and one number</p>
+                        </div>
+                        <div class="col-lg-6 my-2">
+                            <input id="repassword" type="password" class="form-control py-2 bg-white" placeholder="Repassword" />
+                            <p class="text-center bg-danger-subtle d-none text-danger rounded-3 mt-2 p-3">Enter valid repassword</p>
+                        </div>
+                        <div class="text-center mt-2">
+                            <button id="submit-button" class="btn btn-outline-danger p-2 disabled">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+
+        <script src="./js/bootstrap.bundle.min.js"></script>
+        <script src="./js/jquery-3.6.4.min.js"></script>
+        <script src="./js/app.js"></script>
+    </body>
+</html>
